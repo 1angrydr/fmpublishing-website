@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>FM Publishing — iOS Apps for Forex &amp; Crypto Trading</title>
+<style>
+  :root{
+    --bg:#0f172a;       /* slate-900 */
+    --card:#111827;     /* gray-900 */
+    --muted:#9ca3af;    /* gray-400 */
+    --text:#e5e7eb;     /* gray-200 */
+    --accent:#22c55e;   /* green-500 */
+    --accent2:#60a5fa;  /* blue-400 */
+    --border:#1f2937;   /* gray-800 */
+    --link:#93c5fd;     /* blue-300 */
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{position:sticky;top:0;z-index:10;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  nav .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+  .brand span{font-weight:800;letter-spacing:.2px}
+  .nav-links a{margin-left:18px;font-weight:600}
+  .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:var(--white);font-weight:700;border:1px solid #16a34a}
+  .btn-outline{background:transparent;border-color:var(--accent);color:var(--white)}
+  .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:48px 0 32px;border-bottom:1px solid var(--border)}
+  h1{font-size:clamp(32px,4vw,44px);line-height:1.1;margin:.1em 0}
+  h2{font-size:clamp(22px,2.6vw,28px);margin:1.6em 0 .6em}
+  h3{font-size:18px;margin:1.2em 0 .4em}
+  p.lead{color:#d1d5db;font-size:18px;max-width:60ch}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+  .muted{color:var(--muted)}
+  .section{padding:32px 0;border-bottom:1px solid var(--border)}
+  footer{padding:30px 0;color:var(--muted);font-size:14px}
+  .mono{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;}
+  .stack{display:flex;gap:10px;flex-wrap:wrap}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .faq details{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px}
+  .faq summary{cursor:pointer;font-weight:700}
+  .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:#0b1224}
+  .icon{width:48px;height:48px}
+  .icon-sm{width:22px;height:22px}
+  .hero-illus{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(96,165,250,.18),rgba(34,197,94,.08));border:1px solid var(--border);border-radius:16px;padding:20px}
+  .address{white-space:pre-line}
+  
+  /* Video Section Styles */
+  .video-section{padding:48px 0;background:linear-gradient(180deg,rgba(96,165,250,.05),rgba(34,197,94,.02))}
+  .video-container{max-width:900px;margin:0 auto;text-align:center}
+  .video-wrapper{position:relative;border-radius:16px;overflow:hidden;border:2px solid var(--border);box-shadow:0 10px 40px rgba(0,0,0,.3);background:var(--card);max-width:450px;margin:0 auto}
+  .video-wrapper video{width:100%;height:auto;display:block}
+  .video-caption{margin-top:16px;color:var(--muted);font-size:14px}
+  
+  @media (max-width: 900px){
+    .hero{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}
+    .grid-2{grid-template-columns:1fr}
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<nav>
+<div class="brand">
+<svg class="icon-sm" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M12 3v18m4.5-13c0-1.657-2.015-3-4.5-3S7.5 6.343 7.5 8c0 1.657 2.015 3 4.5 3s4.5 1.343 4.5 3-2.015 3-4.5 3-4.5-1.343-4.5-3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>FM Publishing</span>
+</div>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#apps">Apps</a>
+<a href="#faq">FAQ</a>
+<a href="#privacy">Privacy</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</div>
+</header>
+<main>
+<section class="wrap hero">
+<div>
+<div class="stack">
+<span class="pill">
+<svg class="icon-sm" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2a10 10 0 100 20 10 10 0 000-20Zm.8 5h.2c1.5 0 3 .8 3.2 2.3.2 1-.2 1.9-1.1 2.5 1.4.6 2.1 1.7 1.9 3.2-.3 1.8-1.8 2.8-4 2.8H12v1.1h-1.2V18H9v-1.2h.8V7.2H9V6h1.8V5h1.2v1h.8Zm-2 1.2v3.2h2.4c1 0 1.8-.5 1.8-1.6 0-1-.8-1.6-1.8-1.6H10.8Zm0 4.4V16h2.8c1.2 0 2-.6 2-1.8s-.8-1.8-2-1.8h-2.8Z"></path>
+</svg>
+          Crypto
+        </span>
+<span class="pill">
+<svg class="icon-sm" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M12 3v18m4.5-13c0-1.657-2.015-3-4.5-3S7.5 6.343 7.5 8c0 1.657 2.015 3 4.5 3s4.5 1.343 4.5 3-2.015 3-4.5 3-4.5-1.343-4.5-3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+          Forex
+        </span>
+</div>
+<h1>Building simple, fast iOS apps for Forex &amp; Crypto trading</h1>
+<p class="lead">FM Publishing focuses on lightweight, intuitive apps that help traders capture entries, exits, and outcomes—without the clutter.</p>
+<div class="stack" style="margin-top:14px">
+<a class="btn" href="#apps">See Our App</a>
+<a class="btn btn-outline" href="#contact">Get in Touch</a>
+</div>
+</div>
+<div aria-hidden="true" class="hero-illus">
+<svg fill="none" height="220" viewbox="0 0 320 220" width="320" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#1f2937" height="160" rx="16" stroke="#374151" stroke-width="2" width="90" x="115" y="30"></rect>
+<rect fill="#0f172a" height="145" rx="8" width="78" x="121" y="37"></rect>
+<rect fill="#1f2937" height="6" rx="3" width="30" x="145" y="39"></rect>
+<path d="M130 90 L145 75 L160 85 L175 70 L190 80" stroke="#22c55e" stroke-linecap="round" stroke-width="2.5"></path>
+<circle cx="145" cy="160" fill="#374151" r="12"></circle>
+<circle cx="175" cy="160" fill="#374151" r="12"></circle>
+<path d="M95 150 Q105 180, 130 190 Q155 195, 175 190 Q195 185, 205 170 Q210 155, 205 140" fill="none" stroke="#60a5fa" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+</section>
+
+<section class="video-section">
+<div class="wrap">
+<div class="video-container">
+<h2 style="margin-top:0">See EZPZ Trade Journal in Action</h2>
+<p class="lead" style="margin:0 auto 24px;max-width:70ch">Watch how simple it is to track trades and calculate position sizes with our forex and crypto calculator.</p>
+<div class="video-wrapper">
+<video 
+  controls 
+  preload="auto"
+  playsinline
+  webkit-playsinline
+  style="background:#000">
+  <source src="promo_video_web.mp4" type="video/mp4">
+  <source src="Promotion_Reel_EZPZ_Trade_Journal.mp4" type="video/mp4">
+  <p style="color:white;padding:20px">Your browser doesn't support HTML5 video. <a href="promo_video_web.mp4" download style="color:#60a5fa">Download the video</a> instead.</p>
+</video>
+</div>
+<p class="video-caption">EZPZ Trade Journal - Simple position sizing and trade tracking for forex and crypto traders</p>
+</div>
+</div>
+</section>
+
+<section class="wrap section" id="about">
+<h2>About FM Publishing</h2>
+<p>FM Publishing is dedicated to creating professional-grade trading tools for iOS. We believe in:</p>
+<div class="cards" style="margin-top:20px">
+<div class="card">
+<h3>Simplicity First</h3>
+<p class="muted">Clean interfaces that get out of your way and let you focus on what matters: your trading strategy.</p>
+</div>
+<div class="card">
+<h3>Privacy by Design</h3>
+<p class="muted">Your data stays on your device. No cloud servers, no tracking, no surveillance—just pure local storage.</p>
+</div>
+<div class="card">
+<h3>No Subscriptions</h3>
+<p class="muted">One-time purchase. No recurring fees. You own the app, period.</p>
+</div>
+</div>
+</section>
+<section class="wrap section" id="apps">
+<h2>Our Apps</h2>
+<div class="card" style="max-width:700px">
+<h3>📊 EZPZ Trade Journal</h3>
+<p><strong>For iOS</strong></p>
+<p>A straightforward trading journal and position calculator designed for forex and crypto traders. Track your trades, calculate proper position sizes, and view detailed statistics—all offline.</p>
+<ul style="color:var(--muted);margin:12px 0">
+<li>Forex &amp; Crypto position calculators with 50:1 leverage</li>
+<li>Manual trade logging (for trades executed on external platforms)</li>
+<li>Performance statistics: win rate, profit factor, average win/loss</li>
+<li>100% offline operation—no API connections</li>
+<li>No subscriptions, no ads</li>
+</ul>
+<div style="margin-top:16px">
+<a class="btn" href="https://apps.apple.com/us/app/ezpz-trade-journal/id6754179482" target="_blank">Download on App Store</a>
+</div>
+</div>
+</section>
+<section class="wrap section faq" id="faq">
+<h2>Frequently Asked Questions</h2>
+<details>
+<summary>Is EZPZ Trade Journal a trading platform?</summary>
+<p>No. EZPZ is a <strong>calculator and journal</strong>, not a trading platform. You cannot buy, sell, or execute trades within the app. It's designed to help you track trades you make on external platforms (like MT4, Binance, etc.) and calculate proper position sizes.</p>
+</details>
+<details>
+<summary>Does the app connect to any exchanges or brokers?</summary>
+<p>No. The app works 100% offline. There are no API connections, no cloud storage, and no external integrations. You manually enter all data.</p>
+</details>
+<details>
+<summary>How does pricing work?</summary>
+<p>One-time purchase. No subscriptions, no recurring fees. Pay once, own forever.</p>
+</details>
+<details>
+<summary>What data does the app collect?</summary>
+<p>None. All your trade data is stored locally on your device using iOS AppStorage. FM Publishing does not have access to your trading information. See our <a href="#privacy">Privacy Policy</a> for details.</p>
+</details>
+<details>
+<summary>Can I use this for stocks or options?</summary>
+<p>Currently, EZPZ Trade Journal is optimized for forex and cryptocurrency trading. Stock and options support may be added in future updates based on user feedback.</p>
+</details>
+<details>
+<summary>Do you offer support?</summary>
+<p>Yes! Email us at <a href="/cdn-cgi/l/email-protection#02717772726d707642646f7277606e6b716a6b6c652c6c6776"><span class="__cf_email__" data-cfemail="45363035352a3731052328353027292c362d2c2b226b2b2031">[email&#160;protected]</span></a> and we'll respond within 24-48 hours.</p>
+</details>
+</section>
+<section class="wrap section" id="privacy">
+<h2>Privacy Policy</h2>
+<p><em>Last updated: December 5, 2024</em></p>
+<br/>
+<h2>Interpretation and Definitions</h2>
+<h3>Interpretation</h3>
+<p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+<br/>
+<h3>Definitions</h3>
+<p>For the purposes of this Privacy Policy:</p>
+<br/>
+<ul>
+<li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+<li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+<li><strong>Application</strong> refers to EZPZ Trade Journal, the software program provided by the Company.</li>
+<li>**Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to FM Publishing, LLC, 
+**<span style="background-color: #FFFF00">10685-B Hazelhurst Dr. # 42071, Houston, TX 77043, USA</span>**
+.</li>
+<li>**Country** refers to: **<span style="background-color: #FFFF00">Texas, United States</span>**</li>
+<li>**Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+<li>**Personal Data** is any information that relates to an identified or identifiable individual.</li>
+<li>**Service** refers to the Application.</li>
+<li>**Service Provider** means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+<li>**Usage Data** refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+<li>**You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+</ul>
+<br/>
+<h2>Collecting and Using Your Personal Data</h2>
+<h3>Types of Data Collected</h3>
+<p><strong>Personal Data:</strong> EZPZ Trade Journal does not collect any personal data. All information you enter (trades, calculations, settings) is stored locally on your device using iOS AppStorage and never transmitted to our servers.</p>
+<br/>
+<p><strong>Usage Data:</strong> We do not collect usage data, analytics, or telemetry from the app.</p>
+<br/>
+<h2>Use of Your Personal Data</h2>
+<p>Since we do not collect personal data, we do not use, share, or process any personal information.</p>
+<br/>
+<h2>Retention of Your Personal Data</h2>
+<p>All data entered into EZPZ Trade Journal remains on your device. Deleting the app will permanently remove all data. We do not retain any user data on external servers.</p>
+<br/>
+<h2>Transfer of Your Personal Data</h2>
+<p>No data is transferred. Everything stays on your device.</p>
+<br/>
+<h2>Delete Your Personal Data</h2>
+<p>You can delete all data at any time by using the "Erase All Trades" function within the app, or by uninstalling the application from your device.</p>
+<br/>
+<h2>Disclosure of Your Personal Data</h2>
+<p>We do not disclose, share, or sell any personal data because we do not collect any.</p>
+<br/>
+<h2>Security of Your Personal Data</h2>
+<p>Since data is stored locally on your device using iOS's built-in AppStorage mechanism, the security of your data depends on your device's security (passcode, Face ID, Touch ID). We recommend keeping your device secure.</p>
+<br/>
+<h2>Children's Privacy</h2>
+<p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13.</p>
+<br/>
+<h2>Links to Other Websites</h2>
+<p>Our Service may contain links to other websites that are not operated by Us (e.g., educational resources, support documentation). We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+<br/>
+<h2>Changes to this Privacy Policy</h2>
+<p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+<br/>
+<h2>Contact Us</h2>
+<p>If you have any questions about this Privacy Policy, You can contact us:</p>
+<ul>
+<li>By email: <a href="/cdn-cgi/l/email-protection#ddaea8adadb2afa99dbbb0ada8bfb1b4aeb5b4b3baf3b3b8a9"><span class="__cf_email__" data-cfemail="9deee8ededf2efe9ddfbf0ede8fff1f4eef5f4f3fab3f3f8e9">[email&#160;protected]</span></a></li>
+</ul>
+</section>
+<section class="wrap section" id="contact">
+<h2>Contact</h2>
+<div class="grid-2">
+<div class="card">
+<h3>Get in touch</h3>
+<p>Email: <a href="/cdn-cgi/l/email-protection#384b
